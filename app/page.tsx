@@ -15,7 +15,7 @@ export default function Home() {
     try {
       const response = await fetch("http://localhost:3000/api/employees");
       const json = await response.json();
-      setEmployees(json.employees || []);
+      setEmployees(json.employees || []);//this was origanlly json.data and i needed to change, this was my big change 
 
       console.log({ json });
     } catch (error) {
