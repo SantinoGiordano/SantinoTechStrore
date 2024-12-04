@@ -4,7 +4,7 @@ import React from "react";
 export default function Nav(){
     return (
         <>
-          <div className="backdrop-blur-md bg-opacity-50 text-xl text-black p-10 bg-slate-200 fixed top-0 w-full flex justify-between items-center">
+          <div className="backdrop-blur-md bg-opacity-50 text-xl text-black p-10 bg-slate-200 fixed top-0 w-full flex justify-between items-center z-10">
             {/* Left-aligned content */}
             <div>
               <Link className="font-bold text-2xl" href={"./"}>
