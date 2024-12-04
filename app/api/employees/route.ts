@@ -33,7 +33,7 @@ const employees = [
     }
   ]
 
-    return new Response(JSON.stringify({ employees}), {
+    return new Response(JSON.stringify({ employees }), {
         status: 200,
         headers: { "Content-Type": "application/json" },
     })
