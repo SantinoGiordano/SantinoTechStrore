@@ -14,11 +14,8 @@ export default function Nav(){
       
             {/* Right-aligned content */}
             <div className="flex space-x-5">
-              <Link className="" href={"./"}>
-                Home
-              </Link>
-              <Link className="" href={"./events"}>
-                Events
+              <Link className="" href={"./product"}>
+                Product
               </Link>
               <Link className="" href={"./about"}>
                 About
