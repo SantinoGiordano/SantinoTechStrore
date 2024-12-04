@@ -7,7 +7,7 @@ export default function Nav(){
           <div className="backdrop-blur-md bg-opacity-50 text-xl text-black p-10 bg-slate-200 fixed top-0 w-full flex justify-between items-center">
             {/* Left-aligned content */}
             <div>
-              <Link className="font-bold text-lg" href={"./"}>
+              <Link className="font-bold text-2xl" href={"./"}>
                 Software Solutions
               </Link>
             </div>
