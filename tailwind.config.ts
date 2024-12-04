@@ -11,9 +11,11 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
-        'aboutBackground': "url('/aboutOffice.jpg')",
-        'productBackground': "url('/product.jpg')",
-        'homeBackground': "url('/gears.jpg')",
+      },
+      backgroundImage:{
+      'aboutBackground': "url('/aboutOffice.avif')",
+      'productBackground': "url('/product.jpg')",
+      'homeBackground': "url('/gears.jpg')",
         
       },
     },
