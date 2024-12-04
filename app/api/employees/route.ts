@@ -7,25 +7,29 @@ const employees = [
       "id": 1,
       "name": "Alice Johnson",
       "position": "Software Engineer",
-      "email": "alice@techcompany.com"
+      "email": "alice@techcompany.com",
+      "img":"redShirtGirl.jpg"
     },
     {
       "id": 2,
       "name": "Bob Smith",
       "position": "Product Manager",
-      "email": "bob@techcompany.com"
+      "email": "bob@techcompany.com",
+      "img":"blueShirtPerson.jpg"
     },
     {
       "id": 3,
-      "name": "Catherine Lee",
+      "name": "Charles Lee",
       "position": "UX Designer",
-      "email": "catherine@techcompany.com"
+      "email": "charles@techcompany.com",
+      "img":"BlackShirtBoy.jpg"
     },
     {
       "id": 4,
       "name": "David Wilson",
       "position": "Data Scientist",
-      "email": "david@techcompany.com"
+      "email": "david@techcompany.com",
+      "img":"blueBeardBoy.jpg"
     }
   ]
 
