@@ -41,9 +41,8 @@ export default function About() {
 
       <div className="py-8">
         <h1 className="text-2xl font-semibold mb-4">Employee List</h1>
-        {/* {!employees.length && <p>loading...</p>} */}
+        {!employees.length && <p>loding<span className="loading loading-dots loading-xs"></span></p>}
       </div>
-
       <div className="flex flex-wrap gap-5 justify-center">
         {employees.map((employee, index) => (
           <div key={index} className="flex flex-col max-w-72">
@@ -51,6 +50,7 @@ export default function About() {
               <figure>
                 <h2 className="card-title text">{employee.name}</h2>
                 <img
+                  draggable='false'
                   src={employee.img}
                   alt={`${employee.name}'s profile`}
                   className="rounded-full w-48 h-48 object-cover"
