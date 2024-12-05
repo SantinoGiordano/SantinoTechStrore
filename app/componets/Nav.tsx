@@ -14,13 +14,13 @@ export default function Nav(){
       
             {/* Right-aligned content */}
             <div className="flex space-x-5">
-              <Link className="" href={"./product"}>
+              <Link className=""href={"./product"}>
                 Product
               </Link>
-              <Link className="" href={"./about"}>
+              <Link className=""href={"./about"}>
                 About
               </Link>
-              <Link className="" href={"./pages"}>
+              <Link className=""href={"./pages"}>
                 Contact
               </Link>
             </div>
