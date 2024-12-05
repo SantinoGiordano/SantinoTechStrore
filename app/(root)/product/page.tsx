@@ -52,8 +52,8 @@ export default function Products() {
           <h2 className="card-title font-bold p-2">{service.name}</h2>
           <p className="p-2 font-serif font-thin">{service.description}</p>
           <div className="card-actions justify-end p-2">${service.price}.99</div>
-          {/* <Link href={`product/${service.name}`} className="m-2">More Info</Link> */}
-          <Link 
+          <Link href={`product/${service.id}`} className="m-2">More Info</Link>
+          {/* <Link 
             className="p-2"
             href={{
               pathname: `${service.id}`, // Ensure a URL-friendly path
@@ -63,7 +63,7 @@ export default function Products() {
             }}
           >
             More Info... 
-          </Link>
+          </Link> */}
         </div>
       </div>
     </div>
