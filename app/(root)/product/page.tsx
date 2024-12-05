@@ -1,5 +1,5 @@
 "use client";
-
+import Link from "next/link";
 import React, { useEffect, useState } from "react";
 
 interface Services {
@@ -32,7 +32,7 @@ export default function Products() {
 
   return (
     <>
-    <div className="bg-blue-500">
+    <div className="bg-red-400">
       <div className="h-screen bg-fixed bg-center bg-cover bg-productBackground">
         <div className="h-full bg-black/50 flex items-center justify-center">
           <h1 className="text-white text-4xl md:text-6xl font-bold">
@@ -41,22 +41,35 @@ export default function Products() {
         </div>
       </div>
 
-      <div className="flex flex-wrap gap-5 justify-center p-10 text-white">
-        {services.map((service, index) => (
-          <div key={index} className="bg-blue-950 card card-side bg-base-100 shadow-xl transform transition-all duration-300 hover:scale-105">
-            <div className="flex flex-col max-w-72">
-              <figure className="p-2">
-                <img src={service.img} alt={service.name} />
-              </figure>
-              <div className="card-body">
-                <h2 className="card-title font-bold p-2">{service.name}</h2>
-                <p className="p-2 font-serif font-thin">{service.description}</p>
-                <div className="card-actions justify-end p-2">${service.price}.99</div>
-              </div>
-            </div>
-          </div>
-        ))}
+      <div className="flex flex-wrap gap-5 justify-center p-10">
+  {services.map((service, index) => (
+    <div key={index} className="rounded-lg  bg-red-300 card card-side bg-base-100 shadow-xl transform transition-all duration-300 hover:scale-105">
+      <div className="flex flex-col max-w-96">
+        <figure className="p-2">
+          <img src={service.img} alt={service.name} />
+        </figure>
+        <div className="card-body">
+          <h2 className="card-title font-bold p-2">{service.name}</h2>
+          <p className="p-2 font-serif font-thin">{service.description}</p>
+          <div className="card-actions justify-end p-2">${service.price}.99</div>
+          {/* <Link href={`product/${service.name}`} className="m-2">More Info</Link> */}
+          <Link 
+            className="p-2"
+            href={{
+              pathname: `${service.id}`, // Ensure a URL-friendly path
+              query: { 
+                services: JSON.stringify(services)
+               }, 
+            }}
+          >
+            More Info... 
+          </Link>
+        </div>
       </div>
+    </div>
+  ))}
+</div>
+
     </div>
     </>
   );
