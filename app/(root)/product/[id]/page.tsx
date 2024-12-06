@@ -1,6 +1,7 @@
 "use client";
+import ProductError from "@/app/componets/productError";
 import Link from "next/link";
-import { useParams, useRouter } from "next/navigation";
+import { useParams } from "next/navigation";
 import React, { useEffect, useState } from "react";
 
 interface Services {
@@ -28,7 +29,7 @@ export default function Page() {
   useEffect(() => {
     getServices();
     console.log("Services after fetch:", services);
-  }, []);
+  }, [services]);
 
   const { id } = useParams(); // Use useParams instead of useRouter
 
@@ -40,7 +41,8 @@ export default function Page() {
 
   // If the product is not found, display a fallback message
   if (!product) {
-    return <div>Product not found</div>;
+    return <ProductError/>
+   
   }
   const conjugatedImg = "/" + product.img
   
@@ -48,6 +50,7 @@ export default function Page() {
     <>
       <div className="text-center pt-60">
         <img 
+          draggable="false"
           src={conjugatedImg} 
           alt={product.name} 
           className="max-w-[400px] min-h-[400px] rounded-full mx-auto"
