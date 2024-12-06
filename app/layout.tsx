@@ -31,9 +31,9 @@ export default function RootLayout({
       >
         <Nav/>
         {children}
-        <footer className="p-10 text-center text-sm bg-red-200">
+        {/* <footer className="p-10 text-center text-sm bg-red-200">
           Created By Santino Giordano
-        </footer>
+        </footer> */}
       </body>
     </html>
   );
