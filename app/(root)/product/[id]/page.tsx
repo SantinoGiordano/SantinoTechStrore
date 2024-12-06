@@ -47,14 +47,25 @@ export default function Page() {
   return (
     <>
       <div className="text-center pt-60">
-        <img src={conjugatedImg} alt={product.name} className="max-w-[400px] min-h-[400px] rounded-full mx-auto" />
+        <img 
+          src={conjugatedImg} 
+          alt={product.name} 
+          className="max-w-[400px] min-h-[400px] rounded-full mx-auto"
+        />
+
         <h1>Product Details</h1>
         <div>{product.name}</div>
         <div className=''>Description:{product.description}</div>
         <div>Price: ${product.price}</div>
+        
         <Link href={"/product"}>
-        <button type="button" className="min-w-96 text-gray-900 hover:text-white border border-gray-800 hover:bg-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 dark:border-gray-600 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-800">Dark</button>
+          <button 
+          type="button" 
+          className="min-w-96 text-gray-900 hover:text-white border border-gray-800 hover:bg-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 dark:border-gray-600 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-800"
+          >Back
+          </button>
         </Link>
+
       </div>
     </>
   );
