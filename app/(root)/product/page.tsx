@@ -43,7 +43,7 @@ export default function Products() {
 
       <div className="flex flex-wrap gap-5 justify-center p-10">
   {services.map((service, index) => (
-    <div key={index} className="rounded-lg  bg-red-300 card card-side bg-base-100 shadow-xl transform transition-all duration-300 hover:scale-105">
+    <div key={index} className="rounded-lg bg-red-300 card card-side bg-base-100 shadow-xl transform transition-all duration-300 hover:scale-105">
       <div className="flex flex-col max-w-96">
         <figure className="p-2">
           <img className="max-w-[200px] max-h-[200px] min-w-[200px] min-h-[200px] rounded-full" src={service.img} alt={service.name} />
