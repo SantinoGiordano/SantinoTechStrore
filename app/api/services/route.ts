@@ -8,7 +8,7 @@ export async function GET() {
       price: 500, 
       description:
         "Tailored software solutions to meet the specific needs of a business or industry, enhancing efficiency and innovation.",
-      img: "https://placehold.co/200x200",
+      img: "customSoftware.jpg",
     },
     {
       id: 2,
@@ -16,7 +16,7 @@ export async function GET() {
       price: 400, 
       description:
         "Design and development of custom mobile applications for iOS and Android platforms to expand your business reach.",
-      img: "https://placehold.co/200x200",
+      img: "mobileApp.jpg",
     },
     {
       id: 3,
@@ -24,7 +24,7 @@ export async function GET() {
       price: 600,
       description:
         "Cloud infrastructure setup, management, and migration services, including SaaS, PaaS, and IaaS solutions for businesses.",
-      img: "https://placehold.co/200x200",
+      img: "cloudSoutions.jpg",
     },
     {
       id: 4,
@@ -32,7 +32,7 @@ export async function GET() {
       price: 450,
       description:
         "Design and development of websites and web applications, including e-commerce and content management systems (CMS).",
-      img: "https://placehold.co/200x200",
+      img: "webDevelopment.jpg",
     },
     {
       id: 5,
@@ -40,7 +40,7 @@ export async function GET() {
       price: 700, 
       description:
         "Implementation and customization of ERP software to streamline business operations, including finance, HR, and supply chain management.",
-      img: "https://placehold.co/200x200",
+      img: "erp.jpg",
     },
     {
       id: 6,
@@ -48,7 +48,7 @@ export async function GET() {
       price: 550, 
       description:
         "Development or integration of CRM platforms to manage customer interactions, improve sales processes, and enhance marketing efforts.",
-      img: "https://placehold.co/200x200",
+      img: "crm.jpg",
     },
     {
       id: 7,
@@ -56,7 +56,7 @@ export async function GET() {
       price: 800, 
       description:
         "Security audits, risk assessments, and the implementation of security protocols to protect data and systems from cyber threats.",
-      img: "https://placehold.co/200x200",
+      img: "security.jpg",
     },
     {
       id: 8,
@@ -72,7 +72,7 @@ export async function GET() {
       price: 600, 
       description:
         "Integrating various software platforms to ensure seamless communication and data flow across different business systems.",
-      img: "https://placehold.co/200x200",
+      img: "softwareIntagration.jpg",
     },
     {
       id: 10,
@@ -80,7 +80,7 @@ export async function GET() {
       price: 400, 
       description:
         "Ongoing support, bug fixes, updates, and upgrades to ensure software systems are running optimally and securely.",
-      img: "https://placehold.co/200x200",
+      img: "softwareMaintenance.jpg",
     },
   ];
 
