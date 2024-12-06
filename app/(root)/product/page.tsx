@@ -46,7 +46,7 @@ export default function Products() {
     <div key={index} className="rounded-lg  bg-red-300 card card-side bg-base-100 shadow-xl transform transition-all duration-300 hover:scale-105">
       <div className="flex flex-col max-w-96">
         <figure className="p-2">
-          <img src={service.img} alt={service.name} />
+          <img className="max-w-[200px] max-h-[200px] min-w-[200px] min-h-[200px] rounded-full" src={service.img} alt={service.name} />
         </figure>
         <div className="card-body">
           <h2 className="card-title font-bold p-2">{service.name}</h2>
