@@ -60,7 +60,7 @@ const EmailForm = () => {
           </h1>
           <form onSubmit={handleSubmit} className="">
             <div className="mb-4">
-              <label className="block text-sm font-medium text-black">
+              <label className="block text-sm font-medium text-white">
                 Name
               </label>
               <input
@@ -73,7 +73,7 @@ const EmailForm = () => {
             </div>
 
             <div className="mb-4">
-              <label className="block text-sm font-medium text-black">
+              <label className="block text-sm font-medium text-white">
                 Email Address
               </label>
               <input
@@ -86,7 +86,7 @@ const EmailForm = () => {
             </div>
 
             <div className="mb-4">
-              <label className="block text-sm font-medium text-black">
+              <label className="block text-sm font-medium text-white">
                 Subject
               </label>
               <input
@@ -99,7 +99,7 @@ const EmailForm = () => {
             </div>
 
             <div className="mb-4">
-              <label className="block text-sm font-medium text-black">
+              <label className="block text-sm font-medium text-white">
                 Body
               </label>
               <textarea
@@ -112,7 +112,7 @@ const EmailForm = () => {
             </div>
 
             <div className="mb-4">
-              <label className="block text-sm font-medium text-black ">
+              <label className="block text-sm font-medium text-white ">
                 Attach File (Optional)
               </label>
               <input
