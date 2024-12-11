@@ -10,19 +10,15 @@ const EmailForm = () => {
   const [file, setFile] = useState<File | null>(null);
   const [status, setStatus] = useState("");
 
-  // Handle file selection
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const selectedFile = e.target.files ? e.target.files[0] : null;
     setFile(selectedFile);
   };
 
-  // Handle form submission
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-
     setStatus("Sending...");
 
-    // Create a new FormData object
     const formData = new FormData();
     formData.append("name", name);
     formData.append("email", email);
@@ -53,12 +49,12 @@ const EmailForm = () => {
 
   return (
     <>
-      <div className='pt-32 bg-[url("/crm.jpg")] bg-cover bg-center h-screen'>
-        <div className="max-w-lg mx-auto rounded-lg shadow-lg  p-10 backdrop-blur-lg ">
+      <div className="pt-32 bg-[url('/crm.jpg')] bg-cover bg-center h-screen">
+        <div className="max-w-lg mx-auto rounded-lg shadow-lg p-10 backdrop-blur-lg">
           <h1 className="text-2xl font-bold text-center mb-4 text-black">
             Send Email
           </h1>
-          <form onSubmit={handleSubmit} className="">
+          <form onSubmit={handleSubmit}>
             <div className="mb-4">
               <label className="block text-sm font-medium text-white">
                 Name
@@ -71,7 +67,6 @@ const EmailForm = () => {
                 required
               />
             </div>
-
             <div className="mb-4">
               <label className="block text-sm font-medium text-white">
                 Email Address
@@ -84,7 +79,6 @@ const EmailForm = () => {
                 required
               />
             </div>
-
             <div className="mb-4">
               <label className="block text-sm font-medium text-white">
                 Subject
@@ -97,7 +91,6 @@ const EmailForm = () => {
                 required
               />
             </div>
-
             <div className="mb-4">
               <label className="block text-sm font-medium text-white">
                 Body
@@ -110,9 +103,8 @@ const EmailForm = () => {
                 rows={5}
               />
             </div>
-
             <div className="mb-4">
-              <label className="block text-sm font-medium text-white ">
+              <label className="block text-sm font-medium text-white">
                 Attach File (Optional)
               </label>
               <input
@@ -121,7 +113,6 @@ const EmailForm = () => {
                 onChange={handleFileChange}
               />
             </div>
-
             <button
               type="submit"
               className="w-full bg-black text-white py-2 rounded-lg hover:bg-grey-500"
@@ -129,7 +120,6 @@ const EmailForm = () => {
               Send Email
             </button>
           </form>
-
           {status && <p className="mt-4 text-center">{status}</p>}
         </div>
       </div>
