@@ -53,7 +53,7 @@ export default function Page() {
           draggable="false"
           src={conjugatedImg} 
           alt={product.name} 
-          className="max-w-[400px] min-h-[400px] rounded-full mx-auto"
+          className="max-w-[400px] min-h-[400px] w-[400px] h-[400px]rounded-full mx-auto"
         />
 
         <h1>Product Details</h1>
