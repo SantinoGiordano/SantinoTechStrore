@@ -20,7 +20,7 @@ export default function Nav(){
               <Link className=""href={"./about"}>
                 About
               </Link>
-              <Link className=""href={"./pages"}>
+              <Link className=""href={"./contact"}>
                 Contact
               </Link>
             </div>
