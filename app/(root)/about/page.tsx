@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
+import Loading from "../loading";
 
 interface Employee {
   name: string;
@@ -41,7 +42,7 @@ export default function About() {
 
       <div className="py-8">
         <h1 className="text-2xl font-semibold mb-4">Employee List</h1>
-        {!employees.length && <p>loding<span className="loading loading-dots loading-xs"></span></p>}
+        {!employees.length && <Loading/>}
       </div>
       <div className="flex flex-wrap gap-5 justify-center">
         {employees.map((employee, index) => (

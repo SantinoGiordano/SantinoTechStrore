@@ -1,4 +1,3 @@
-
 import { Resend } from 'resend';
 import fs from 'fs';
 import path from 'path';
@@ -15,14 +14,22 @@ export async function POST(request: Request) {
     const body = formData.get('body');
     const file = formData.get('file');
 
-    if (!(file instanceof File)) {
+    if (!(file instanceof File) && file !== null) {
+      // If a file is provided but is not a valid File object, return error
       return new Response(
-        JSON.stringify({ error: 'No file uploaded or invalid file format' }),
+        JSON.stringify({ error: 'No valid file uploaded or invalid file format' }),
         { status: 400 }
       );
     }
-    const buffer = Buffer.from(await file.arrayBuffer());
-    const attachment = buffer.toString('base64');
+
+    const attachments = file
+      ? [
+          {
+            content: Buffer.from(await file.arrayBuffer()).toString('base64'),
+            filename: file.name,
+          },
+        ]
+      : [];
 
     // Send email with Resend API
     const { data, error } = await resend.emails.send({
@@ -35,14 +42,9 @@ export async function POST(request: Request) {
           <p>${body}</p>
         </div>
       `,
-      attachments: [
-        {
-          content: attachment,
-          filename: file.name, // Use the file name from the uploaded file
-        },
-      ],
+      attachments: attachments, // Attachments are included only if a file is provided
     });
-
+  
     if (error) {
       return new Response(
         JSON.stringify({ error: error.message || 'Unknown error' }),
@@ -58,3 +60,4 @@ export async function POST(request: Request) {
     );
   }
 }
+
