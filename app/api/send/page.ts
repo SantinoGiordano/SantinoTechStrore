@@ -1,4 +1,4 @@
-// app/api/send/route.ts
+
 import { Resend } from 'resend';
 import fs from 'fs';
 import path from 'path';
