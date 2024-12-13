@@ -1,6 +1,6 @@
 import { Resend } from 'resend';
-import fs from 'fs';
-import path from 'path';
+// import fs from 'fs';
+// import path from 'path';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
